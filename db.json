@@ -1,0 +1,19 @@
+{
+  "events": [
+    {
+      "name": "mikey",
+      "avatar_url": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664463832/d5j57s2oysotin8abvj5.jpg",
+      "id": 1
+    },
+    {
+      "name": "coach ",
+      "avatar_url": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664467717/ictwmewfjd2kliv2frsi.jpg",
+      "id": 2
+    },
+    {
+      "name": "sue",
+      "avatar_url": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664467726/huqdb7fhwfcxlw1tvcad.jpg",
+      "id": 3
+    }
+  ]
+}
