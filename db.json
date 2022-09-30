@@ -3,11 +3,13 @@
     {
       "name": "mikey",
       "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664463832/d5j57s2oysotin8abvj5.jpg",
+      "tickets": 0,
       "id": 1
     },
     {
-      "name": "josh",
-      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664514935/o7clars9hxacbszr2mzm.jpg",
+      "name": "josh cup",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664527299/byuu8zno8fbqeiano3vg.jpg",
+      "tickets": 96,
       "id": 2
     }
   ]

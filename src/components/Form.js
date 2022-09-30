@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Axios from "axios";
 
-function Form({ setData }) {
+function Form({ setData, data }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [eventName, setEventName] = useState("");
+  const [tickets, setTickets] = useState(0);
 
   const uploadImage = (files) => {
     const formData = new FormData();
@@ -22,6 +23,9 @@ function Form({ setData }) {
     Axios.post("http://localhost:8002/events", {
       name: eventName,
       image: selectedFile,
+      tickets: tickets,
+    }).then((res) => {
+      setData([...data, res.data]);
     });
   };
   const form = (
@@ -33,6 +37,14 @@ function Form({ setData }) {
           setEventName(e.target.value);
         }}
         type="text"
+      />
+      <input
+        value={tickets}
+        placeholder="Add the tickets availabe for this event"
+        onChange={(e) => {
+          setTickets(e.target.value);
+        }}
+        type="number"
       />
       <label htmlFor="file">
         Select Image From Gallery
