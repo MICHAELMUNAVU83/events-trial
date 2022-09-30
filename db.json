@@ -2,18 +2,15 @@
   "events": [
     {
       "name": "mikey",
-      "avatar_url": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664463832/d5j57s2oysotin8abvj5.jpg",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664463832/d5j57s2oysotin8abvj5.jpg",
+      "tickets": 0,
       "id": 1
     },
     {
-      "name": "coach ",
-      "avatar_url": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664467717/ictwmewfjd2kliv2frsi.jpg",
+      "name": "josh cup",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664527299/byuu8zno8fbqeiano3vg.jpg",
+      "tickets": 90,
       "id": 2
-    },
-    {
-      "name": "sue",
-      "avatar_url": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664467726/huqdb7fhwfcxlw1tvcad.jpg",
-      "id": 3
     }
   ]
 }
