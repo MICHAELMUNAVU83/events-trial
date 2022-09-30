@@ -52,3 +52,6 @@ label input {
   color: white;
   border-radius: 10px;
 }
+nav a {
+  margin: 10px;
+}

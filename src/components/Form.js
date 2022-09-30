@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Axios from "axios";
 
-function Form() {
-  const [selectedFile, setSelectedFile] = useState("");
+function Form({ setData }) {
+  const [selectedFile, setSelectedFile] = useState(null);
   const [eventName, setEventName] = useState("");
 
   const uploadImage = (files) => {
@@ -17,16 +17,11 @@ function Form() {
       setSelectedFile(res.data.url);
     });
   };
+
   const addEvent = () => {
-    fetch("http://localhost:8000/events", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: eventName,
-        avatar_url: selectedFile,
-      }),
+    Axios.post("http://localhost:8002/events", {
+      name: eventName,
+      image: selectedFile,
     });
   };
   const form = (
