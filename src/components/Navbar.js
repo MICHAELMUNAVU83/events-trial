@@ -6,7 +6,7 @@ function Navbar() {
     <div>
       <nav>
         <Link to="/">Home</Link>
-        <Link to="/form">Add a person</Link>
+        <Link to="/form">Add an Event</Link>
       </nav>
     </div>
   );

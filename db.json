@@ -1,15 +1,25 @@
 {
   "events": [
     {
-      "name": "mikey",
-      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664463832/d5j57s2oysotin8abvj5.jpg",
+      "name": "React Renderaction",
+      "image": "https://pbs.twimg.com/media/FcP3do8agAATZiZ.jpg",
       "tickets": 0,
+      "venue": "I Hub , Kilimani",
+      "date": "2022-10-20",
+      "time": "10:00",
+      "description": "This is a react event",
+      "speakers": "Steve Kibuika , Paul Chesa ,Anthony Sande , Ben Wesonga",
       "id": 1
     },
     {
-      "name": "josh cup",
-      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664527299/byuu8zno8fbqeiano3vg.jpg",
-      "tickets": 90,
+      "name": "Droidcon",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664603061/bj1qhlomnlob0xyr4nsp.png",
+      "tickets": 0,
+      "description": "this is an android meeting ",
+      "date": "2022-10-28",
+      "venue": "ihub",
+      "time": "10:00 am",
+      "speakers": "john mark , stacy nyambura",
       "id": 2
     }
   ]

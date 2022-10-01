@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 function EventSpecs({ data, setData }) {
   const params = useParams();
+
   return (
     <div>
       {data.map(
@@ -10,10 +11,13 @@ function EventSpecs({ data, setData }) {
           event.id === Number(params.id) && (
             <div>
               <h1>{event.name}</h1>
+              Venue :<p>{event.vanue}</p>
+              Staring at : <p>{event.time}</p>
+              Date: <p>{event.date}</p>
+              Event Description: <p>{event.description}</p>
               {event.tickets > 0 ? (
                 <div>
-                  {event.tickets}
-
+                  Remaining Tickets: {event.tickets}
                   <button
                     onClick={() => {
                       if (event.tickets > 0) {
@@ -48,11 +52,11 @@ function EventSpecs({ data, setData }) {
                     }}
                   >
                     {" "}
-                    add
+                    Buy Ticket
                   </button>
                 </div>
               ) : (
-                <h1>Sold out</h1>
+                <h1>Ticket Status : Sold out</h1>
               )}
             </div>
           )
