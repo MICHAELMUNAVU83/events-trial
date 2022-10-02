@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Form from "./components/Form";
+import FormLogin from "./components/FormLogin";
 import "./App.css";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
@@ -21,7 +21,7 @@ function App() {
           <Route path="/" element={<EventsList data={data} />} />
           <Route
             path="/form"
-            element={<Form data={data} setData={setData} />}
+            element={<FormLogin data={data} setData={setData} />}
           />
 
           <Route
