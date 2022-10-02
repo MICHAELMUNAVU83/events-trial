@@ -21,6 +21,17 @@
       "time": "10:00 am",
       "speakers": "john mark , stacy nyambura",
       "id": 2
+    },
+    {
+      "name": "josh event",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664685843/zklsdkvhfziy5pc2hmya.jpg",
+      "tickets": 0,
+      "description": "Bash ya josh",
+      "date": "2022-10-26",
+      "venue": "juja roof",
+      "time": "10:00 am",
+      "speakers": "joshua",
+      "id": 3
     }
   ]
 }

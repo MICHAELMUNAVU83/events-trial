@@ -11,7 +11,7 @@ function EventSpecs({ data, setData }) {
           event.id === Number(params.id) && (
             <div>
               <h1>{event.name}</h1>
-              Venue :<p>{event.vanue}</p>
+              Venue :<p>{event.venue}</p>
               Staring at : <p>{event.time}</p>
               Date: <p>{event.date}</p>
               Event Description: <p>{event.description}</p>
