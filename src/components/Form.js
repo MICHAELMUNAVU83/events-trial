@@ -4,7 +4,12 @@ import Axios from "axios";
 function Form({ setData, data }) {
   const [selectedFile, setSelectedFile] = useState(null);
   const [eventName, setEventName] = useState("");
-  const [tickets, setTickets] = useState(0);
+  const [tickets, setTickets] = useState("");
+  const [description, setDescription] = useState("");
+  const [date, setDate] = useState("");
+  const [venue, setVenue] = useState("");
+  const [time, setTime] = useState("");
+  const [speakers, setSpeakers] = useState("");
 
   const uploadImage = (files) => {
     const formData = new FormData();
@@ -24,12 +29,18 @@ function Form({ setData, data }) {
       name: eventName,
       image: selectedFile,
       tickets: tickets,
+      description: description,
+      date: date,
+      venue: venue,
+      time: time,
+      speakers: speakers,
     }).then((res) => {
       setData([...data, res.data]);
     });
   };
   const form = (
     <div className="form">
+      <h1>Add an event</h1>
       <input
         value={eventName}
         placeholder="Add a name"
@@ -38,14 +49,8 @@ function Form({ setData, data }) {
         }}
         type="text"
       />
-      <input
-        value={tickets}
-        placeholder="Add the tickets availabe for this event"
-        onChange={(e) => {
-          setTickets(e.target.value);
-        }}
-        type="number"
-      />
+      <h1>Add a picture</h1>
+
       <label htmlFor="file">
         Select Image From Gallery
         <input
@@ -56,13 +61,65 @@ function Form({ setData, data }) {
           }}
         />
       </label>
+      <h1>Add tickets available</h1>
+
+      <input
+        value={tickets}
+        placeholder="Add the tickets availabe for this event"
+        onChange={(e) => {
+          setTickets(e.target.value);
+        }}
+        type="number"
+      />
+      <input
+        value={speakers}
+        placeholder="Add the speakers for this event"
+        onChange={(e) => {
+          setSpeakers(e.target.value);
+        }}
+        type="text"
+      />
+
+      <input
+        value={time}
+        onChange={(e) => {
+          setTime(e.target.value);
+        }}
+        type="string"
+        placeholder="Time the event starts"
+      />
+
+      <input
+        value={venue}
+        onChange={(e) => {
+          setVenue(e.target.value);
+        }}
+        type="string"
+        placeholder="Venue"
+      />
+      <input
+        value={date}
+        onChange={(e) => {
+          setDate(e.target.value);
+        }}
+        type="date"
+        placeholder="Date"
+      />
+      <input
+        type="event-description"
+        value={description}
+        onChange={(e) => {
+          setDescription(e.target.value);
+        }}
+        placeholder="Event Description"
+      />
     </div>
   );
   return (
     <div>
       {form}
       <div className="button-div">
-        <button onClick={addEvent}>Add A Person</button>
+        <button onClick={addEvent}>Add An Event</button>
       </div>
     </div>
   );

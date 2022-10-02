@@ -4,7 +4,6 @@ import Form from "./components/Form";
 import "./App.css";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
-
 import Navbar from "./components/Navbar";
 function App() {
   const [data, setData] = useState([]);
@@ -24,7 +23,11 @@ function App() {
             path="/form"
             element={<Form data={data} setData={setData} />}
           />
-          <Route path="/events/:id" element={<EventSpecs setData={setData} data={data} />} />
+
+          <Route
+            path="/events/:id"
+            element={<EventSpecs setData={setData} data={data} />}
+          />
         </Routes>
       </Router>
     </div>

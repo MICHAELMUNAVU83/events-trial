@@ -8,8 +8,7 @@
   justify-content: space-around;
 }
 img {
-  border-radius: 50%;
-  height: 100px;
+  height: 300px;
 }
 label {
   cursor: pointer;
