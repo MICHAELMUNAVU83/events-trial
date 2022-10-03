@@ -5,6 +5,7 @@ import "./App.css";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
 import Navbar from "./components/Navbar";
+import Nav from "./components/Nav";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -14,8 +15,9 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
+    <div>
       <Router>
+        {/* <Nav /> */}
         <Navbar />
         <Routes>
           <Route path="/" element={<EventsList data={data} />} />
