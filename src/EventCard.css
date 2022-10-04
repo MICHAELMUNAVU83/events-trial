@@ -103,6 +103,7 @@ body {
 .btn .price,
 .shopping-cart {
   background: #333;
+  color: white;
   border: 0;
   margin: 0;
 }
@@ -123,6 +124,7 @@ body {
 
 .btn .buy {
   z-index: 3;
+  color: white;
   opacity: 1;
   font-weight: bolder;
 }
