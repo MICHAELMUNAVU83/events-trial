@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import "../Login.css"
 function Login({ isLogin, setIsLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,7 @@ function Login({ isLogin, setIsLogin }) {
     }
   };
   return (
-    <div>
+    <div className="form">
       <input
         value={username}
         onChange={(e) => {
