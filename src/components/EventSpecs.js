@@ -1,66 +1,32 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import "../Try.css";
 
 function EventSpecs({ data, setData }) {
   const params = useParams();
 
   return (
-    <div>
-      {data.map(
-        (event) =>
-          event.id === Number(params.id) && (
-            <div>
-              <h1>{event.name}</h1>
-              Venue :<p>{event.venue}</p>
-              Staring at : <p>{event.time}</p>
-              Date: <p>{event.date}</p>
-              Event Description: <p>{event.description}</p>
-              {event.tickets > 0 ? (
-                <div>
-                  Remaining Tickets: {event.tickets}
-                  <button
-                    onClick={() => {
-                      if (event.tickets > 0) {
-                        fetch(`http://localhost:8002/events/${event.id}`, {
-                          headers: {
-                            "Content-Type": "application/json",
-                          },
-                          method: "PATCH",
-                          body: JSON.stringify({
-                            tickets: event.tickets - 1,
-                          }),
-                        })
-                          .then(function (response) {
-                            // console.log(response);
-                            return response.json();
-                          })
-                          .then(function (obj) {
-                            console.log(obj);
-                            if (event.tickets > 0) {
-                              setData((prevData) => {
-                                return prevData.map((item) => {
-                                  if (item.id === event.id) {
-                                    return obj;
-                                  } else {
-                                    return item;
-                                  }
-                                });
-                              });
-                            }
-                          });
-                      }
-                    }}
-                  >
-                    {" "}
-                    Buy Ticket
-                  </button>
-                </div>
-              ) : (
-                <h1>Ticket Status : Sold out</h1>
-              )}
+    <div className="container-specs">
+      <div className="card">
+        <div className="card-header">
+          <img src={data[params.id - 1].image} alt="rover" />
+        </div>
+        <div className="card-body">
+          <span className="tag tag-teal"> {data[params.id - 1].name} </span>
+          <h4> {data[params.id - 1].description} </h4>
+          <p>An exploration into the truck's polarising design</p>
+          <div className="user">
+            <img
+              src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
+              alt="user"
+            />
+            <div className="user-info">
+              <h5>July Dec</h5>
+              <small>2h ago</small>
             </div>
-          )
-      )}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
