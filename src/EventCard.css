@@ -156,7 +156,7 @@ body {
 .info {
   background: rgba(27, 26, 26, 0.9);
   font-family: "Bree Serif", serif;
-  transition: all 0.3s ease-out;
+  transition: all 0.7s ease-out;
   transform: translateX(-100%);
   position: absolute;
   line-height: 1.8;

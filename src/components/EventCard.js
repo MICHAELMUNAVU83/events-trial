@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
-
+import { useNavigate } from "react-router-dom";
+import "../EventCard.css";
 function EventCard({ event }) {
+  const navigate = useNavigate();
   return (
     <div id="container">
       <div className="product-details">
@@ -20,7 +21,7 @@ function EventCard({ event }) {
         <div className="control">
           <button className="btn">
             {event.tickets > 0 ? (
-              <span className="price">10 tickets </span>
+              <span className="price">{event.tickets} tickets </span>
             ) : (
               <span className="price">Sold out</span>
             )}
@@ -28,7 +29,12 @@ function EventCard({ event }) {
             <span className="shopping-cart">
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </span>
-            <span className="buy">Book Now</span>
+            <span
+              onClick={() => navigate(`/events/${event.id}`)}
+              className="buy"
+            >
+              Book Now
+            </span>
           </button>
         </div>
       </div>

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import FormLogin from "./components/FormLogin";
-import "./App.css";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
 import Navbar from "./components/Navbar";
