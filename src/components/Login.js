@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 import "../Login.css";
-function Login({ isLogin, setIsLogin }) {
+function Login({ setIsLogin }) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const handleSubmit = (e) => {
@@ -8,7 +11,15 @@ function Login({ isLogin, setIsLogin }) {
     if (username === "admin" && password === "admin") {
       setIsLogin(true);
     } else {
-      alert("Wrong credentials");
+      toast.error("Use Username and password as admin to log in successfully", {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
   return (
@@ -170,6 +181,7 @@ function Login({ isLogin, setIsLogin }) {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 }
