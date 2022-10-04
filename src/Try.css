@@ -26,7 +26,21 @@
   padding: 20px;
   min-height: 250px;
 }
-
+.card-body .event-data {
+  display: flex;
+  flex-direction: row;
+}
+.card-body .event-tickets {
+  margin-left: 200px;
+}
+.card-body .event-data .event-details {
+  display: flex;
+  flex-direction: column;
+}
+.card-body .event-data .event-details > div {
+  display: flex;
+  flex-direction: row;
+}
 .tag {
   background: #cccccc;
   border-radius: 50px;
