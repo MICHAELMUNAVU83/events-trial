@@ -7,7 +7,7 @@
       "venue": "I Hub , Kilimani",
       "date": "2022-10-20",
       "time": "10:00",
-      "description": "This is a react event",
+      "description": "This is a react event where we will be discussing react and how to use it we will have many talks from the ag",
       "speakers": "Steve Kibuika , Paul Chesa ,Anthony Sande , Ben Wesonga",
       "id": 1
     },
@@ -25,7 +25,7 @@
     {
       "name": "josh event",
       "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664685843/zklsdkvhfziy5pc2hmya.jpg",
-      "tickets": 0,
+      "tickets": 20,
       "description": "Bash ya josh",
       "date": "2022-10-26",
       "venue": "juja roof",

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import Axios from "axios";
+import "../Form.css";
+import { BiCamera } from "react-icons/bi";
 
 function Form({ setData, data }) {
   const [selectedFile, setSelectedFile] = useState(null);
@@ -39,7 +41,7 @@ function Form({ setData, data }) {
     });
   };
   const form = (
-    <div className="form">
+    <div classNameName="form">
       <h1>Add an event</h1>
       <input
         value={eventName}
@@ -116,10 +118,130 @@ function Form({ setData, data }) {
     </div>
   );
   return (
-    <div>
-      {form}
-      <div className="button-div">
-        <button onClick={addEvent}>Add An Event</button>
+    <div className="signup-container">
+      <div className="left-container">
+        <h1>TECH ME OUT</h1>
+        <div className="puppy">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/image-from-rawpixel-id-542207-jpeg.png" />
+        </div>
+      </div>
+      <div className="right-container">
+        <header>
+          <h1>Yay, puppies! Ensure your pup gets the best care! </h1>
+          <div className="set">
+            <div className="pets-name">
+              <label for="events-name">Name of the Event</label>
+              <input
+                id="events-name"
+                placeholder="Event Name"
+                type="text"
+              ></input>
+            </div>
+            <div className="pets-photo">
+              <button id="pets-upload">
+                <BiCamera />
+              </button>
+              <label for="pets-upload">Upload a photo</label>
+            </div>
+          </div>
+          <div className="set">
+            <div className="pets-breed">
+              <label for="pets-breed">Breed</label>
+              <input
+                id="pets-breed"
+                placeholder="Pet's breed"
+                type="text"
+              ></input>
+            </div>
+            <div className="pets-birthday">
+              <label for="pets-birthday">Birthday</label>
+              <input
+                id="pets-birthday"
+                placeholder="MM/DD/YYYY"
+                type="text"
+              ></input>
+            </div>
+          </div>
+          <div className="set">
+            <div className="pets-gender">
+              <label for="pet-gender-female">Gender</label>
+              <div className="radio-container">
+                <input
+                  id="pet-gender-female"
+                  name="pet-gender"
+                  type="radio"
+                  value="female"
+                ></input>
+                <label for="pet-gender-female">Female</label>
+                <input
+                  id="pet-gender-male"
+                  name="pet-gender"
+                  type="radio"
+                  value="male"
+                ></input>
+                <label for="pet-gender-male">Male</label>
+              </div>
+            </div>
+            <div className="pets-spayed-neutered">
+              <label for="pet-spayed">Spayed or Neutered</label>
+              <div className="radio-container">
+                <input
+                  id="pet-spayed"
+                  name="spayed-neutered"
+                  type="radio"
+                  value="spayed"
+                ></input>
+                <label for="pet-spayed">Spayed</label>
+                <input
+                  id="pet-neutered"
+                  name="spayed-neutered"
+                  type="radio"
+                  value="neutered"
+                ></input>
+                <label for="pet-neutered">Neutered</label>
+              </div>
+            </div>
+          </div>
+          <div className="pets-weight">
+            <label for="pet-weight-0-25">Weight</label>
+            <div className="radio-container">
+              <input
+                id="pet-weight-0-25"
+                name="pet-weight"
+                type="radio"
+                value="0-25"
+              ></input>
+              <label for="pet-weight-0-25">0-25 lbs</label>
+              <input
+                id="pet-weight-25-50"
+                name="pet-weight"
+                type="radio"
+                value="25-50"
+              ></input>
+              <label for="pet-weight-25-50">25-50 lbs</label>
+              <input
+                id="pet-weight-50-100"
+                name="pet-weight"
+                type="radio"
+                value="50-100"
+              ></input>
+              <label for="pet-weight-50-100">50-100 lbs</label>
+              <input
+                id="pet-weight-100-plus"
+                name="pet-weight"
+                type="radio"
+                value="100+"
+              ></input>
+              <label for="pet-weight-100-plus">100+ lbs</label>
+            </div>
+          </div>
+        </header>
+        <footer>
+          <div className="set">
+            <button id="back">Back</button>
+            <button id="next">Next</button>
+          </div>
+        </footer>
       </div>
     </div>
   );

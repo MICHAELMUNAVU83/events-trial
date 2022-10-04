@@ -58,14 +58,14 @@ function EventSpecs({ data, setData }) {
               </div>
             </div>
             <div className="event-tickets">
-              <div>
+              <div className="ticket-div">
                 {data[params.id - 1].tickets > 0 ? (
                   <p>Tickets: {data[params.id - 1].tickets} </p>
                 ) : (
                   <p>Sold out</p>
                 )}
               </div>
-              <div>
+              <div className="ticket-button">
                 {data[params.id - 1].tickets > 0 ? (
                   <button onClick={handleBooking}>Book</button>
                 ) : null}
@@ -74,13 +74,10 @@ function EventSpecs({ data, setData }) {
           </div>
 
           <div className="user">
-            <img
-              src="https://yt3.ggpht.com/a/AGF-l7-0J1G0Ue0mcZMw-99kMeVuBmRxiPjyvIYONg=s900-c-k-c0xffffffff-no-rj-mo"
-              alt="user"
-            />
+            <img src={data[params.id - 1].image} alt="user" />
             <div className="user-info">
-              <h5>July Dec</h5>
-              <small>2h ago</small>
+              <h5> {data[params.id - 1].venue} </h5>
+              <small>{data[params.id - 1].date}</small>
             </div>
           </div>
         </div>
