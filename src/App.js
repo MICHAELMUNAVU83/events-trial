@@ -4,6 +4,7 @@ import FormLogin from "./components/FormLogin";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
 import Navbar from "./components/Navbar";
+import Contact from "./components/Contact";
 
 function App() {
   const [data, setData] = useState([]);
@@ -23,6 +24,7 @@ function App() {
             path="/form"
             element={<FormLogin data={data} setData={setData} />}
           />
+          <Route path="/contact" element={<Contact />} />
 
           <Route
             path="/events/:id"
