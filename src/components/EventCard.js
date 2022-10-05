@@ -53,10 +53,7 @@ function EventCard({ event }) {
         <div className="info">
           <h2>SPEAKERS</h2>
           <ul>
-            <li>
-              <strong>Speakers: </strong>
-              {event.speakers}
-            </li>
+            <li>{event.speakers}</li>
           </ul>
         </div>
       </div>

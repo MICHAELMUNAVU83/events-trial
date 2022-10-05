@@ -156,7 +156,13 @@ body {
 }
 
 .info {
-  background: rgba(27, 26, 26, 0.9);
+  background: rgb(215, 214, 215);
+  background: radial-gradient(
+    circle,
+    rgba(215, 214, 215, 1) 18%,
+    rgba(255, 255, 255, 0.9864320728291317) 83%
+  );
+  opacity: 0.9;
   font-family: "Bree Serif", serif;
   transition: all 0.7s ease-out;
   transform: translateX(-100%);
@@ -164,7 +170,7 @@ body {
   line-height: 1.8;
   text-align: left;
   font-size: 105%;
-  color: #fff;
+  color: #333;
   height: 100%;
   width: 100%;
   left: 0;
