@@ -59,22 +59,24 @@
   width: 40%;
   padding-bottom: 2%;
 }
+.card-body .event-data .event-details h4 {
+  margin-bottom: 2%;
+  margin-top: 2%;
+}
 .card-body .event-data .event-details > div {
   display: flex;
   flex-direction: row;
 }
 .tag {
-  background: #cccccc;
   border-radius: 50px;
-  font-size: 12px;
+  font-size: 2rem;
   margin: 0;
-  color: #fff;
+  color: black;
   padding: 2px 10px;
   text-transform: uppercase;
   cursor: pointer;
 }
 .tag-teal {
-  background-color: #204cce;
   font-weight: bolder;
 }
 
@@ -98,4 +100,7 @@
 }
 .user-info small {
   color: #545d7a;
+}
+.event-detail {
+  margin-left: 2px;
 }

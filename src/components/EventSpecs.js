@@ -1,23 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import "../Try.css";
-
+import "../EventSpecs.css";
+import { MdDateRange } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
+import { AiOutlineClockCircle } from "react-icons/ai";
 function EventSpecs({ data, setData }) {
   const params = useParams();
   const handleBooking = () => {
     if (data[params.id - 1].tickets > 0) {
-      fetch(
-        `http://localhost/8002/events/${data[params.id - 1].id}`,
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-          method: "PATCH",
-          body: JSON.stringify({
-            tickets: data[params.id - 1].tickets - 1,
-          }),
-        }
-      )
+      fetch(`http://localhost:8002/events/${data[params.id - 1].id}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+        method: "PATCH",
+        body: JSON.stringify({
+          tickets: data[params.id - 1].tickets - 1,
+        }),
+      })
         .then(function (response) {
           return response.json();
         })
@@ -50,14 +49,26 @@ function EventSpecs({ data, setData }) {
               <span className="tag tag-teal"> {data[params.id - 1].name} </span>
               <h4> {data[params.id - 1].description} </h4>
               <div>
-                <span>Venue:</span> <span>{data[params.id - 1].venue}</span>
+                <span>
+                  {" "}
+                  <IoLocationOutline />{" "}
+                </span>{" "}
+                <span className="event-detail">
+                  {data[params.id - 1].venue}
+                </span>
               </div>
               <div>
-                <span>Starting at:</span>{" "}
-                <span>{data[params.id - 1].time}</span>
+                <span>
+                  <AiOutlineClockCircle />{" "}
+                </span>{" "}
+                <span className="event-detail">{data[params.id - 1].time}</span>
               </div>
               <div>
-                <span>Date:</span> <span>{data[params.id - 1].date}</span>
+                <span>
+                  {" "}
+                  <MdDateRange />{" "}
+                </span>{" "}
+                <span className="event-detail">{data[params.id - 1].date}</span>
               </div>
             </div>
             <div className="event-tickets">

@@ -1,9 +1,10 @@
 import React from "react";
 import EventCard from "./EventCard";
-import { Splide, SplideSlide } from "@splidejs/react-splide";
+
+import "../EventCard.css";
 function EventsList({ data }) {
   return (
-    <div className="container">
+    <div className="container-big">
       {data.map((event) => (
         <EventCard event={event} />
       ))}
