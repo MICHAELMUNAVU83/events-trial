@@ -1,6 +1,8 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../EventCard.css";
+import { MdDateRange } from "react-icons/md";
+import { IoLocationOutline } from "react-icons/io5";
 function EventCard({ event }) {
   const navigate = useNavigate();
   return (
@@ -16,8 +18,14 @@ function EventCard({ event }) {
         </span>
 
         <p className="information">{event.description}</p>
-        <p className="information">{event.date}</p>
-        <p className="information">{event.venue}</p>
+        <p className="information">
+          {" "}
+          <MdDateRange /> {event.date}
+        </p>
+        <p className="information">
+          {" "}
+          <IoLocationOutline /> {event.venue}
+        </p>
         <div className="control">
           <button className="btn">
             {event.tickets > 0 ? (

@@ -4,7 +4,7 @@ import FormLogin from "./components/FormLogin";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
 import Navbar from "./components/Navbar";
-import Try from "./components/Try";
+
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {

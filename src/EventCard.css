@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bree+Serif&family=EB+Garamond:ital,wght@0,500;1,800&display=swap");
 
 body {
-  background: #dfc2f2;
-  background-image: linear-gradient(to right, #ffffb3, #ffe6e6);
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
   background-attachment: fixed;
   background-size: cover;
 }

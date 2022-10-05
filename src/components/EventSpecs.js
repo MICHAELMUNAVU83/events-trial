@@ -6,15 +6,18 @@ function EventSpecs({ data, setData }) {
   const params = useParams();
   const handleBooking = () => {
     if (data[params.id - 1].tickets > 0) {
-      fetch(`http://localhost:8002/events/${data[params.id - 1].id}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "PATCH",
-        body: JSON.stringify({
-          tickets: data[params.id - 1].tickets - 1,
-        }),
-      })
+      fetch(
+        `http://localhost/8002/events/${data[params.id - 1].id}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "PATCH",
+          body: JSON.stringify({
+            tickets: data[params.id - 1].tickets - 1,
+          }),
+        }
+      )
         .then(function (response) {
           return response.json();
         })

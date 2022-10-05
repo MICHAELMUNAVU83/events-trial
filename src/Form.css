@@ -8,7 +8,7 @@
   opacity: 0;
   font-size: 100px;
 }
-body {
+.form {
   align-items: center;
   display: grid;
   font-family: "Montserrat", sans-serif;

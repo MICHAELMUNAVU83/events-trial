@@ -42,6 +42,7 @@ function Form({ setData, data }) {
   };
 
   return (
+    <div className="form">
     <div className="signup-container">
       <div className="left-container">
         <h1>TECH ME OUT</h1>
@@ -169,6 +170,7 @@ function Form({ setData, data }) {
         </footer>
       </div>
     </div>
+  </div>
   );
 }
 
