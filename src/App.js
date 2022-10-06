@@ -4,7 +4,6 @@ import FormLogin from "./components/FormLogin";
 import EventsList from "./components/EventsList";
 import EventSpecs from "./components/EventSpecs";
 import Navbar from "./components/Navbar";
-import Contact from "./components/Contact";
 
 function App() {
   const [data, setData] = useState([]);
@@ -13,7 +12,13 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setData(data);
+
+        const newA = data.sort(function (a, b) {
+          var dateA = new Date(a.date),
+            dateB = new Date(b.date);
+          return dateA - dateB;
+        });
+        setData(newA);
       });
   }, []);
 
@@ -27,7 +32,6 @@ function App() {
             path="/form"
             element={<FormLogin data={data} setData={setData} />}
           />
-          <Route path="/contact" element={<Contact />} />
 
           <Route
             path="/events/:id"
@@ -40,6 +44,3 @@ function App() {
 }
 
 export default App;
-{reviews.length > 0 && reviews.map(review=>(
-  <p>{re}</p>
-))}

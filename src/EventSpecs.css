@@ -36,21 +36,31 @@
 .card-body .event-tickets .ticket-div {
   width: 100px;
 }
-.card-body .event-tickets .ticket-div p {
+.card-body .event-tickets .ticket-div div {
   font-weight: bolder;
   color: gray;
-  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.2rem;
+  width: 100%;
+}
+.card-body .event-tickets .ticket-div div span {
   width: 100%;
 }
 .card-body .event-tickets .ticket-button button {
   background-color: #204cce;
   color: #fff;
   border: none;
+  margin-top: 4%;
   border-radius: 5px;
   padding: 10px;
   width: 100%;
   font-size: 20px;
   font-weight: bolder;
+}
+.card-body .event-tickets .ticket-button button:hover {
+  transform: scale(1.05);
+  transition: 0.2s all ease-in-out;
 }
 
 .card-body .event-data .event-details {
@@ -72,7 +82,7 @@
   font-size: 2rem;
   margin: 0;
   color: black;
-  padding: 2px 10px;
+
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -103,4 +113,14 @@
 }
 .event-detail {
   margin-left: 2px;
+  font-size: 1rem;
+}
+#speakers-details {
+  width: 100%;
+  font-size: 1rem;
+}
+.input {
+  margin-bottom: 4%;
+  height: 2rem;
+  width: 100%;
 }
