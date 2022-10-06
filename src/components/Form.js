@@ -57,7 +57,7 @@ function Form({ setData, data }) {
             <h1>Add Your Event and let Developers Tech you Out </h1>
             <div className="set">
               <div className="pets-name">
-                <label for="events-name">Name of the Event</label>
+                <label htmlFor="events-name">Name of the Event</label>
                 <input
                   id="events-name"
                   placeholder="Event Name"
@@ -79,12 +79,12 @@ function Form({ setData, data }) {
                     }}
                   />
                 </button>
-                <label for="pets-upload">Upload a photo</label>
+                <label htmlFor="pets-upload">Upload a photo</label>
               </div>
             </div>
             <div className="set">
               <div className="pets-breed">
-                <label for="events-venue">Venue</label>
+                <label htmlFor="events-venue">Venue</label>
                 <input
                   id="events-venue"
                   placeholder="Venue..."
@@ -96,7 +96,7 @@ function Form({ setData, data }) {
                 ></input>
               </div>
               <div className="pets-birthday">
-                <label for="pets-birthday">Event Date</label>
+                <label htmlFor="pets-birthday">Event Date</label>
                 <input
                   id="pets-birthday"
                   type="date"
@@ -109,7 +109,7 @@ function Form({ setData, data }) {
             </div>
             <div className="set">
               <div className="pets-breed">
-                <label for="events-venue">Tickets Available</label>
+                <label htmlFor="events-venue">Tickets Available</label>
                 <input
                   id="events-tickets"
                   placeholder="Tickets Available..."
@@ -121,7 +121,7 @@ function Form({ setData, data }) {
                 ></input>
               </div>
               <div className="pets-birthday">
-                <label for="pets-birthday">Time the Event Starts</label>
+                <label htmlFor="pets-birthday">Time the Event Starts</label>
                 <input
                   id="pets-birthday"
                   placeholder="Time..."
@@ -135,7 +135,7 @@ function Form({ setData, data }) {
             </div>
 
             <div className="pets-weight">
-              <label for="pet-weight-0-25">Speakers at the event</label>
+              <label htmlFor="pet-weight-0-25">Speakers at the event</label>
               <div className="radio-container">
                 <input
                   value={speakers}
@@ -146,7 +146,7 @@ function Form({ setData, data }) {
                   type="text"
                 />
               </div>
-              <label for="pet-weight-0-25">Event description</label>
+              <label htmlFor="pet-weight-0-25">Event description</label>
               <div className="radio-container">
                 <input
                   type="text"
