@@ -1,21 +1,34 @@
-import React from "react";
-import { useParams } from "react-router-dom";
+import React, { useRef, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import "../EventSpecs.css";
+import emailjs from "@emailjs/browser";
 import { MdDateRange } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
+import { GiMicrophone } from "react-icons/gi";
 function EventSpecs({ data, setData }) {
+  const navigate = useNavigate();
+  const form = useRef();
   const params = useParams();
-  const handleBooking = (e) => {
+  const [userEmail, setUserEmail] = useState("");
+  const event = data.find((event) => event.id === Number(params.id));
+  const sendEmail = (e) => {
     e.preventDefault();
-    if (data[params.id - 1].tickets > 0) {
-      fetch(`http://localhost:8002/events/${data[params.id - 1].id}`, {
+
+    if (event.tickets > 0 && userEmail !== "") {
+      emailjs.sendForm(
+        "service_8nuxsw3",
+        "template_fam0cyg",
+        form.current,
+        "6M-rV1iiaVqa5DANh"
+      );
+      fetch(`http://localhost:8002/events/${event.id}`, {
         headers: {
           "Content-Type": "application/json",
         },
         method: "PATCH",
         body: JSON.stringify({
-          tickets: data[params.id - 1].tickets - 1,
+          tickets: event.tickets - 1,
         }),
       })
         .then(function (response) {
@@ -23,10 +36,10 @@ function EventSpecs({ data, setData }) {
         })
         .then(function (obj) {
           console.log(obj);
-          if (data[params.id - 1].tickets > 0) {
+          if (event.tickets > 0) {
             setData((prevData) => {
               return prevData.map((item) => {
-                if (item.id === data[params.id - 1].id) {
+                if (item.id === event.id) {
                   return obj;
                 } else {
                   return item;
@@ -35,6 +48,11 @@ function EventSpecs({ data, setData }) {
             });
           }
         });
+      setTimeout(() => {
+        navigate("/");
+      }, 3000);
+    } else {
+      alert("Please fill in the form!");
     }
   };
 
@@ -42,63 +60,82 @@ function EventSpecs({ data, setData }) {
     <div className="container-specs">
       <div className="card">
         <div className="card-header">
-          <img src={data[params.id - 1].image} alt="rover" />
+          <img src={event.image} alt="rover" />
         </div>
         <div className="card-body">
           <div className="event-data">
             <div className="event-details">
-              <span className="tag tag-teal"> {data[params.id - 1].name} </span>
-              <h4> {data[params.id - 1].description} </h4>
+              <span className="tag tag-teal"> {event.name} </span>
+              <h4> {event.description} </h4>
               <div>
                 <span>
                   {" "}
                   <IoLocationOutline />{" "}
                 </span>{" "}
-                <span className="event-detail">
-                  {data[params.id - 1].venue}
-                </span>
+                <span className="event-detail">{event.venue}</span>
               </div>
               <div>
                 <span>
                   <AiOutlineClockCircle />{" "}
                 </span>{" "}
-                <span className="event-detail">{data[params.id - 1].time}</span>
+                <span className="event-detail">{event.time}</span>
               </div>
               <div>
                 <span>
                   {" "}
                   <MdDateRange />{" "}
                 </span>{" "}
-                <span className="event-detail">{data[params.id - 1].date}</span>
+                <span className="event-detail">{event.date}</span>
+              </div>
+              <div>
+                <span>
+                  {" "}
+                  <GiMicrophone />{" "}
+                </span>{" "}
+                <span id="speakers-details" className="event-detail">
+                  {event.speakers}
+                </span>
               </div>
             </div>
             <div className="event-tickets">
               <div className="ticket-div">
-                {data[params.id - 1].tickets > 0 ? (
-                  <p>Tickets: {data[params.id - 1].tickets} </p>
+                {event.tickets > 0 ? (
+                  <div>
+                    <span>Tickets </span> <span>:</span>{" "}
+                    <span> {event.tickets} </span>
+                  </div>
                 ) : (
                   <p>Sold out</p>
                 )}
               </div>
 
               <div className="ticket-button">
-                {data[params.id - 1].tickets > 0 ? (
-                  <div>
-                    <input type="text" placeholder="Enter your name" />
-                    <button type="submit" onClick={handleBooking}>
-                      Book
+                {event.tickets > 0 ? (
+                  <form ref={form} onSubmit={sendEmail}>
+                    <input type="hidden" name="event_name" value={event.name} />
+                    <input
+                      name="user_email"
+                      className="input"
+                      type="text"
+                      value={userEmail}
+                      onChange={(e) => setUserEmail(e.target.value)}
+                      placeholder="Enter your name"
+                    />
+
+                    <button className="book-button" type="submit">
+                      Book Event
                     </button>
-                  </div>
+                  </form>
                 ) : null}
               </div>
             </div>
           </div>
 
           <div className="user">
-            <img src={data[params.id - 1].image} alt="user" />
+            <img src={event.image} alt="user" />
             <div className="user-info">
-              <h5> {data[params.id - 1].venue} </h5>
-              <small>{data[params.id - 1].date}</small>
+              <h5> {event.venue} </h5>
+              <small>{event.date}</small>
             </div>
           </div>
         </div>

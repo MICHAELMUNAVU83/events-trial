@@ -37,12 +37,21 @@ function EventCard({ event }) {
             <span className="shopping-cart">
               <i className="fa fa-shopping-cart" aria-hidden="true"></i>
             </span>
-            <span
-              onClick={() => navigate(`/events/${event.id}`)}
-              className="buy"
-            >
-              Book Now
-            </span>
+            {event.tickets > 0 ? (
+              <span
+                onClick={() => navigate(`/events/${event.id}`)}
+                className="buy"
+              >
+                Book Now
+              </span>
+            ) : (
+              <span
+                onClick={() => navigate(`/events/${event.id}`)}
+                className="buy"
+              >
+                Read More
+              </span>
+            )}
           </button>
         </div>
       </div>
