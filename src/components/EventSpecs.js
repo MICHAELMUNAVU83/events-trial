@@ -128,7 +128,9 @@ function EventSpecs({ data, setData }) {
                     <span> {event.tickets} </span>
                   </div>
                 ) : (
-                  <p>Sold out</p>
+                  <div>
+                    <span id="sold-out">Sold Out </span>
+                  </div>
                 )}
               </div>
 
