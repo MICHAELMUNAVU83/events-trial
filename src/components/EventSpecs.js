@@ -6,7 +6,8 @@ import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 function EventSpecs({ data, setData }) {
   const params = useParams();
-  const handleBooking = () => {
+  const handleBooking = (e) => {
+    e.preventDefault();
     if (data[params.id - 1].tickets > 0) {
       fetch(`http://localhost:8002/events/${data[params.id - 1].id}`, {
         headers: {
@@ -79,9 +80,15 @@ function EventSpecs({ data, setData }) {
                   <p>Sold out</p>
                 )}
               </div>
+
               <div className="ticket-button">
                 {data[params.id - 1].tickets > 0 ? (
-                  <button onClick={handleBooking}>Book</button>
+                  <div>
+                    <input type="text" placeholder="Enter your name" />
+                    <button type="submit" onClick={handleBooking}>
+                      Book
+                    </button>
+                  </div>
                 ) : null}
               </div>
             </div>

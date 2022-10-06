@@ -25,9 +25,9 @@
     {
       "name": "josh event",
       "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664685843/zklsdkvhfziy5pc2hmya.jpg",
-      "tickets": 8,
+      "tickets": 7,
       "description": "Bash ya josh",
-      "date": "2022-10-26",
+      "date": "2022-12-12",
       "venue": "juja roof",
       "time": "10:00 am",
       "speakers": "joshua",
@@ -36,7 +36,7 @@
     {
       "name": "event 2",
       "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664871634/n16mumwnpc66vkvjoqsv.png",
-      "tickets": 3,
+      "tickets": 2,
       "description": "goat event",
       "date": "2022-09-28",
       "venue": "juja",

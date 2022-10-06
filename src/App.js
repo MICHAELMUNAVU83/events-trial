@@ -13,7 +13,13 @@ function App() {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
-        setData(data);
+
+        const newA = data.sort(function (a, b) {
+          var dateA = new Date(a.date),
+            dateB = new Date(b.date);
+          return dateA - dateB;
+        });
+        setData(newA);
       });
   }, []);
 
@@ -40,6 +46,3 @@ function App() {
 }
 
 export default App;
-{reviews.length > 0 && reviews.map(review=>(
-  <p>{re}</p>
-))}
