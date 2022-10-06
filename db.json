@@ -3,9 +3,9 @@
     {
       "name": "React Renderaction",
       "image": "https://pbs.twimg.com/media/FcP3do8agAATZiZ.jpg",
-      "tickets": 7,
+      "tickets": 0,
       "venue": "I Hub , Kilimani",
-      "date": "2022-10-20",
+      "date": "2010-10-20",
       "time": "10:00",
       "description": "This is a react event where we will be discussing react and how to use it we will have many talks from the ag",
       "speakers": "Steve Kibuika , Paul Chesa ,Anthony Sande , Ben Wesonga",
@@ -25,7 +25,7 @@
     {
       "name": "josh event",
       "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1664685843/zklsdkvhfziy5pc2hmya.jpg",
-      "tickets": 9,
+      "tickets": 8,
       "description": "Bash ya josh",
       "date": "2022-10-26",
       "venue": "juja roof",
@@ -43,6 +43,28 @@
       "time": "10:00 am",
       "speakers": "kamawe",
       "id": 4
+    },
+    {
+      "name": "tech 101",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1665036401/exg88nmxysgxb2u763ri.jpg",
+      "tickets": 2,
+      "description": "lovely",
+      "date": "2022-10-04",
+      "venue": "vasco dagama",
+      "time": "2:00 Am",
+      "speakers": "da vinci",
+      "id": 5
+    },
+    {
+      "name": "dragons event",
+      "image": "http://res.cloudinary.com/dakiak4mc/image/upload/v1665037311/cfw2n1yhlbkkzljbboi8.jpg",
+      "tickets": 14,
+      "description": "talk about dragons",
+      "date": "2022-10-04",
+      "venue": "moringa school",
+      "time": "10:00 am",
+      "speakers": "faith kilonzi",
+      "id": 6
     }
   ]
 }

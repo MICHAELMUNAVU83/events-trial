@@ -11,7 +11,10 @@ function App() {
   useEffect(() => {
     fetch("http://localhost:8002/events")
       .then((res) => res.json())
-      .then((data) => setData(data));
+      .then((data) => {
+        console.log(data);
+        setData(data);
+      });
   }, []);
 
   return (
@@ -37,3 +40,6 @@ function App() {
 }
 
 export default App;
+{reviews.length > 0 && reviews.map(review=>(
+  <p>{re}</p>
+))}
