@@ -29,7 +29,7 @@ function Form({ setData, data }) {
   };
 
   const addEvent = () => {
-    Axios.post("http://localhost:8002/events", {
+    Axios.post("https://mytecheventsapi.herokuapp.com/events", {
       name: eventName,
       image: selectedFile,
       tickets: tickets,

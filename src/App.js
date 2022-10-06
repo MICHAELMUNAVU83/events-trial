@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:8002/events")
+    fetch("https://mytecheventsapi.herokuapp.com/events")
       .then((res) => res.json())
       .then((data) => {
         console.log(data);

@@ -25,7 +25,7 @@ function EventSpecs({ data, setData }) {
         form.current,
         "6M-rV1iiaVqa5DANh"
       );
-      fetch(`http://localhost:8002/events/${event.id}`, {
+      fetch(`https://mytecheventsapi.herokuapp.com/events/${event.id}`, {
         headers: {
           "Content-Type": "application/json",
         },
