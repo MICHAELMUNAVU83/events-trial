@@ -6,6 +6,9 @@ import { MdDateRange } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
 import { AiOutlineClockCircle } from "react-icons/ai";
 import { GiMicrophone } from "react-icons/gi";
+import { ToastContainer, toast } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 function EventSpecs({ data, setData }) {
   const navigate = useNavigate();
   const form = useRef();
@@ -48,11 +51,31 @@ function EventSpecs({ data, setData }) {
             });
           }
         });
+      toast.success(
+        `Ticket for ${event.name} booked , check your email for confirmation within 24 hours`,
+        {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        }
+      );
       setTimeout(() => {
         navigate("/");
-      }, 3000);
+      }, 7000);
     } else {
-      alert("Please fill in the form!");
+      toast.error("Kindly add your email to book the event ", {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
   };
 
@@ -137,6 +160,9 @@ function EventSpecs({ data, setData }) {
               <h5> {event.venue} </h5>
               <small>{event.date}</small>
             </div>
+          </div>
+          <div>
+            <ToastContainer />
           </div>
         </div>
       </div>
