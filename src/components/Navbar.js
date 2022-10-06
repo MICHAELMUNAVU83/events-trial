@@ -14,7 +14,9 @@ function Navbar() {
         <Link to="#" className="menu-bars">
           <FaBars onClick={showSideBar} />
         </Link>
+        <div className="logo">TECH ME OUT</div>
       </div>
+
       <nav className={sideBar ? "nav-menu active" : "nav-menu"}>
         <ul className="nav-menu-items">
           <li className="navbar-toggle">

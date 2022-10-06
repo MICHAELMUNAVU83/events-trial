@@ -142,7 +142,7 @@ function EventSpecs({ data, setData }) {
                       type="text"
                       value={userEmail}
                       onChange={(e) => setUserEmail(e.target.value)}
-                      placeholder="Enter your name"
+                      placeholder="Enter your email..."
                     />
 
                     <button className="book-button" type="submit">
