@@ -31,7 +31,8 @@
   flex-direction: row;
 }
 .card-body .event-tickets {
-  margin-left: 200px;
+  width: 50%;
+  margin-left: 100px;
 }
 .card-body .event-tickets .ticket-div {
   width: 100px;

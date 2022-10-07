@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import "../EventCard.css";
 import { MdDateRange } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import { GiMicrophone } from "react-icons/gi";
 function EventCard({ event }) {
   const navigate = useNavigate();
   return (
@@ -62,7 +63,9 @@ function EventCard({ event }) {
         <div className="info">
           <h2>SPEAKERS</h2>
           <ul>
-            <li>{event.speakers}</li>
+            <li>
+              <GiMicrophone /> {event.speakers}
+            </li>
           </ul>
         </div>
       </div>
