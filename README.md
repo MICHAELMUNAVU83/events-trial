@@ -1,6 +1,7 @@
-![news-today-image](https://user-images.githubusercontent.com/86654131/187967240-3d223da3-d33f-490d-81ee-5c605071dc9c.png)
+
 
 # Project Name
+![Preview](https://user-images.githubusercontent.com/86654131/194622201-949a021a-ecf7-4f57-aa1b-543c3ad6bcab.png)
 
 TRANCE NEWS TODAY
 
