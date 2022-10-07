@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Arimo&family=Bebas+Neue&family=Combo&family=Comfortaa&family=Dancing+Script:wght@500&family=Delius&family=Inter:wght@300&family=Kanit:wght@200&family=Krona+One&family=Merienda&family=Playfair+Display:ital@1&family=Roboto+Serif:opsz,wght@8..144,600&display=swap");
+
 .navbar {
   background-color: #a9c9ff;
   background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
@@ -10,7 +12,7 @@
   margin-left: 2rem;
   font-size: 2rem;
   background: none;
-  color: white;
+  color: blue;
 }
 .nav-menu {
   width: 250px;
@@ -73,4 +75,11 @@
   font-size: 2rem;
   font-weight: bolder;
   color: blue;
+  color: radial-gradient(
+    circle,
+    rgba(215, 214, 215, 1) 0%,
+    rgba(141, 160, 204, 1) 0%,
+    rgba(22, 75, 187, 0.9864320728291317) 74%
+  );
+  font-family: "Roboto Serif", serif;
 }
