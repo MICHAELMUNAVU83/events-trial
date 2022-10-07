@@ -162,7 +162,7 @@ body {
     rgba(215, 214, 215, 1) 18%,
     rgba(255, 255, 255, 0.9864320728291317) 83%
   );
-  opacity: 0.9;
+  opacity: 0.8;
   font-family: "Bree Serif", serif;
   transition: all 0.7s ease-out;
   transform: translateX(-100%);
@@ -179,6 +179,7 @@ body {
 
 .info h2 {
   text-align: center;
+  text-decoration: underline;
 }
 .product-image:hover .info {
   transform: translateX(0);
