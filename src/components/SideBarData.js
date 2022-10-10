@@ -1,7 +1,6 @@
 import React from "react";
 import { AiFillHome } from "react-icons/ai";
 import { MdAddToPhotos } from "react-icons/md";
-import { IoIosContacts } from "react-icons/io";
 
 export const SideBarData = [
   {
@@ -14,12 +13,6 @@ export const SideBarData = [
     title: "Add Event",
     path: "/form",
     icon: <MdAddToPhotos />,
-    cName: "nav-text",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-    icon: <IoIosContacts />,
     cName: "nav-text",
   },
 ];

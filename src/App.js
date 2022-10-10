@@ -11,8 +11,6 @@ function App() {
     fetch("https://mytecheventsapi.herokuapp.com/events")
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-
         const newA = data.sort(function (a, b) {
           var dateA = new Date(a.date),
             dateB = new Date(b.date);
