@@ -93,10 +93,13 @@
   .nav-menu {
     background-color: transparent;
     background-image: none;
-    width: 350px;
+    width: 250px;
+    position: absolute;
+    overflow: hidden;
   }
   .logo {
     font-size: 1rem;
     margin-left: 25%;
+    opacity: 0;
   }
 }
