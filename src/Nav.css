@@ -19,7 +19,6 @@
   height: 100vh;
   background-color: #a9c9ff;
   background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
-
   display: flex;
   justify-content: center;
   position: fixed;
@@ -82,4 +81,22 @@
     rgba(22, 75, 187, 0.9864320728291317) 74%
   );
   font-family: "Roboto Serif", serif;
+}
+@media (max-width: 740px) {
+  .navbar {
+    width: 100%;
+    font-size: 1rem;
+  }
+  .menu-bars {
+    font-size: 1rem;
+  }
+  .nav-menu {
+    background-color: transparent;
+    background-image: none;
+    width: 350px;
+  }
+  .logo {
+    font-size: 1rem;
+    margin-left: 25%;
+  }
 }
