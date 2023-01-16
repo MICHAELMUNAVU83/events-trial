@@ -25,7 +25,7 @@ function EventSpecs({ data, setData }) {
         form.current,
         "6M-rV1iiaVqa5DANh"
       );
-      fetch(`https://mytecheventsapi.herokuapp.com/events/${event.id}`, {
+      fetch(`https://tech-me-out-backend.herokuapp.com/events/${event.id}`, {
         headers: {
           "Content-Type": "application/json",
         },
