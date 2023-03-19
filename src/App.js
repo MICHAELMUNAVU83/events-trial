@@ -8,7 +8,7 @@ import Navbar from "./components/Navbar";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
-    fetch("https://tech-me-out-backend.herokuapp.com/events")
+    fetch("https://tech-me-out-backend-api.herokuapp.com/events")
       .then((res) => res.json())
       .then((data) => {
         const newA = data.sort(function (a, b) {

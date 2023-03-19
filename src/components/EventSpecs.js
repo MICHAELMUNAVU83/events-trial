@@ -25,15 +25,18 @@ function EventSpecs({ data, setData }) {
         form.current,
         "6M-rV1iiaVqa5DANh"
       );
-      fetch(`https://tech-me-out-backend.herokuapp.com/events/${event.id}`, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-        method: "PATCH",
-        body: JSON.stringify({
-          tickets: event.tickets - 1,
-        }),
-      })
+      fetch(
+        `https://tech-me-out-backend-api.herokuapp.com/events/${event.id}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          method: "PATCH",
+          body: JSON.stringify({
+            tickets: event.tickets - 1,
+          }),
+        }
+      )
         .then(function (response) {
           return response.json();
         })
