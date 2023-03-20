@@ -16,7 +16,7 @@ This site Helps Tech Event Oragnisers post events and Help devs buy tickets for 
 
 ## Live Demo 
 
-[Live Demo Link](https://techmeout.netlify.app/)
+[Live Demo Link](https://tech-me-out.vercel.app/)
 
 ## Author
 
